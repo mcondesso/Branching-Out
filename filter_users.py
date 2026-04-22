@@ -1,7 +1,22 @@
+"""A script to filter users from a JSON file based on name, age, or email.
+
+This module provides functions to filter users stored in a JSON file (`users.json`)
+by their name, age, or email. It supports case-insensitive matching for names and
+emails, and strict integer comparison for age.
+"""
+
 import json
 
 
 def filter_users_by_name(name):
+    """Filter users by their name (case-insensitive).
+
+    Args:
+        name (str): The name to filter users by.
+
+    Returns:
+        list: A list of users matching the given name.
+    """
     with open("users.json", "r") as file:
         users = json.load(file)
 
@@ -9,6 +24,14 @@ def filter_users_by_name(name):
 
 
 def filter_users_by_age(age):
+    """Filter users by their age.
+
+    Args:
+        age (int): The age to filter users by.
+
+    Returns:
+        list: A list of users matching the given age.
+    """
     with open("users.json", "r") as file:
         users = json.load(file)
 
@@ -16,6 +39,14 @@ def filter_users_by_age(age):
 
 
 def filter_users_by_email(email):
+    """Filter users by their email (case-insensitive).
+
+    Args:
+        email (str): The email to filter users by.
+
+    Returns:
+        list: A list of users matching the given email.
+    """
     with open("users.json", "r") as file:
         users = json.load(file)
 
